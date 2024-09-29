@@ -2,7 +2,7 @@
     //Editor settings
     "editor.cursorStyle": "line",
     "editor.fontFamily": "FiraCode Nerd Font",
-    "editor.fontSize": 14,
+    "editor.fontSize": 10,
     "editor.formatOnPaste": false,
     "editor.inlineSuggest.enabled": true,
     "editor.lineHeight": 1.8,
@@ -18,12 +18,14 @@
     "editor.scrollbar.vertical": "hidden",
     "editor.fontLigatures": true,
     //Workbench settings
-    "workbench.activityBar.location": "top",
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.activityBar.location": "default",
     "workbench.editor.labelFormat": "short",
     "workbench.editor.showTabs": "multiple",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "newUntitledFile",
+    "workbench.layoutControl.enabled": false,
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "workbench.sideBar.location": "right",
     //Explorer settings
     "explorer.compactFolders": false,
     "explorer.confirmDragAndDrop": false,
@@ -31,10 +33,11 @@
     //breadcrumbs settings
     "breadcrumbs.enabled": false,
     "window.density.editorTabHeight": "compact",
-    "window.menuBarVisibility": "toggle",
+    "window.menuBarVisibility": "hidden",
     "window.title": " ",
     "window.titleBarStyle": "custom",
-    "window.zoomLevel": 0.5,
+    "window.zoomLevel": 0.1,
+    "window.commandCenter": false,
     //Apc settings
     "apc.font.family": "FiraCode Nerd Font",
     "apc.listRow": {
@@ -76,9 +79,6 @@
         }
     },
     //Remote settings
-    "remote.SSH.remotePlatform": {
-        "192.168.1.201": "linux"
-    },
     //GitHub settings
     "github.copilot.enable": {
         "*": true
@@ -313,6 +313,4 @@
             ]
         }
     ],
-    "window.commandCenter": false,
-    "workbench.layoutControl.enabled": false,
 }
