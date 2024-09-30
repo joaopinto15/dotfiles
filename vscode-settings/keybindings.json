@@ -35,11 +35,32 @@
     {
         "key": "shift+n",
         "command": "explorer.newFolder",
-        "when": "explorerViewletFocus"
+        "when": "explorerViewletFocus && !inputFocus"
     },
     {
         "command": "deleteFile",
         "key": "d",
         "when": "filesExplorerFocus && !inputFocus"
     },
+    {
+        "key": "j",
+        "command": "list.focusDown",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "k",
+        "command": "list.focusUp",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "h",
+        "command": "list.collapse",
+        "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "l",
+        "command": "list.expand",
+        "when": "explorerViewletFocus && !inputFocus"
+    }
+    // VIM navigation
 ]
