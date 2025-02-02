@@ -1,72 +1,66 @@
 # 🌟 DotFiles Repository
 
-This repository contains my dotfiles for configuring a personalized Linux environment. Using **GNU Stow**, you can easily manage and symlink dotfiles to your home directory. 
+This repository contains my dotfiles for configuring a personalized Windows environment. Using [PSDotFiles](https://github.com/ralish/PSDotFiles), you can easily manage and symlink dotfiles to your home directory. 
 
 ---
 
 ## 🚀 Features
 - Organized dotfiles for different tools and environments.
-- Easy management using **GNU Stow**.
-- Compatible with any Linux distribution.
+- Easy management using **PSDotFiles**.
+- Compatible with Powershell.
 
 ---
 
 ## 📥 Installation
 
-### 1. Clone the Repository
-First, clone this repository to your home directory or a directory of your choice:
-```bash
-git clone https://github.com/yourusername/dotfiles.git
-cd dotfiles
+### 1. Install PSDotFiles module
+```posh
+Install-Module -Name PSDotFiles
 ```
 
 ---
 
-### 2. Install **GNU Stow**
+### 2. Check if every is good 👍
 #### For Debian/Ubuntu:
-```bash
-sudo apt update && sudo apt upgrade -y
-sudo apt install stow -y
+```posh
+Get-Module PSDotFiles -ListAvailable
 ```
-
-#### For Arch Linux/Manjaro:
-```bash
-sudo pacman -Syu
-sudo pacman -S stow
-```
-
 ---
 
-### 3. Link Dotfiles
-To link the dotfiles to your home directory, run the following command inside the repository:
-```bash
-stow *
+### 3. Config
+Before you can use PSDotFiles you should set the $DotFilesPath variable to the location of your dotfiles folder. For example:
+```posh
+$DotFilesPath = "C:\Users\<your.account>\dotfiles"
 ```
-
-This will symlink the directories (e.g., `vim`, `zsh`, `git`, etc.) to the corresponding locations in your home directory.
 
 ---
 
 ## 🛠️ Usage Tips
-- Organize your dotfiles into subdirectories (e.g., `vim`, `zsh`, `git`).
-- To link a specific configuration only, specify its directory:
-  ```bash
-  stow vim
-  ```
-- To remove a symlinked configuration:
-  ```bash
-  stow -D vim
-  ```
-- To remove all symlinked configurations created from this repository:
-  ```bash
-  stow -D *
-  ```
 
+There are some additional variables you can set in your profile which modify default behaviour:
+
+- `$DotFilesAllowNestedSymlinks` (default: `$false`)  
+  Allow directory symlinks to destinations outside of the source component path earlier in the path hierarchy.
+- `$DotFilesAutodetect` (default: `$false`)  
+  Perform automatic detection for components with no metadata file.
+- `$DotFilesGlobalIgnorePaths` (default: `@('.stow-local-ignore')`)  
+  Paths to ignore for all components in addition to any explicit `<IgnorePath>` elements in the metadata.
+- `$DotFilesSkipMetadataSchemaChecks` (default: `$false`)  
+  Skip validating metadata files against the metadata schema. Generally only useful in development.
 ---
 
-## 📜 Notes
-1. Ensure you back up your existing configuration files before linking new ones.
-2. Adjust subdirectory names in the repository to match your configuration needs.
+## 📜 Commands
+
+```posh
+# Enumerates available dotfiles components
+Get-DotFiles
+
+# Installs one or more dotfiles components
+Install-DotFiles
+
+# Removes one or more dotfiles components
+Remove-DotFiles
+```
 
 ---
 
