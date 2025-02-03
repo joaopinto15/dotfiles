@@ -21,7 +21,6 @@ Install-Module -Name PSDotFiles
 ---
 
 ### 2. Check if every is good 👍
-#### For Debian/Ubuntu:
 ```posh
 Get-Module PSDotFiles -ListAvailable
 ```
