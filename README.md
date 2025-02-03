@@ -76,7 +76,65 @@ dotfiles/
 
 ---
 
-## 📚 References
-- [GNU Stow Manual](https://www.gnu.org/software/stow/)
+## 🤖 Metadata 
 
----
+The `metadata` folder contains XML files that define the configuration and behavior of each component. Below is an explanation of the sample XML structure:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Metadata.xsd">
+    <FriendlyName></FriendlyName>
+    <BasePath></BasePath>
+    <Detection>
+        <Method></Method>
+        <MatchRegEx>false</MatchRegEx>
+        <MatchCase>false</MatchCase>
+        <MatchPattern></MatchPattern>
+        <FindInPath></FindInPath>
+        <PathExists></PathExists>
+        <Availability></Availability>
+    </Detection>
+    <InstallPath>
+        <SpecialFolder></SpecialFolder>
+        <Destination></Destination>
+        <HideSymlinks>false</HideSymlinks>
+    </InstallPath>
+    <IgnorePaths>
+        <IgnorePath></IgnorePath>
+    </IgnorePaths>
+    <AdditionalPaths>
+        <AdditionalPath source="">
+            <TargetPath symlink="" />
+        </AdditionalPath>
+    </AdditionalPaths>
+    <RenamePaths>
+        <RenamePath source="" symlink="" />
+    </RenamePaths>
+</Component>
+```
+
+### Explanation:
+
+- **FriendlyName**: An optional friendly name for the component.
+- **BasePath**: Optional path relative to the component directory to use as the source path.
+- **Detection**: Configuration to customize component detection.
+  - **Method**: Specifies the method used to detect the availability of the component.
+  - **MatchRegEx**: Selects either wildcard (default) or regular expression matching.
+  - **MatchCase**: Selects either case insensitive (default) or case sensitive matching.
+  - **MatchPattern**: The pattern used for matching against the list of retrieved programs.
+  - **FindInPath**: Name of the binary to search for in the system's PATH.
+  - **PathExists**: Absolute path to test the existence of.
+  - **Availability**: Availability state to always return for this component.
+- **InstallPath**: Configuration to customize component installation path.
+  - **SpecialFolder**: Specifies a special folder from the Environment.SpecialFolder enumeration.
+  - **Destination**: Specifies an absolute or relative destination path subject to SpecialFolder.
+  - **HideSymlinks**: Specifies whether component symlinks should be hidden.
+- **IgnorePaths**: Configuration of relative paths which should be ignored.
+  - **IgnorePath**: Each relative path to ignore should be placed in an IgnorePath element.
+- **AdditionalPaths**: Configuration of relative source paths which should have additional symlinks created under a different path.
+  - **AdditionalPath**: Specifies the source and target paths for additional symlinks.
+- **RenamePaths**: Configuration of relative source paths which should have their target symlink created under a different path.
+  - **RenamePath**: Specifies the source and target paths for renamed symlinks.
+
+The `metadata` folder should contain XML files like the one above for each component you want to manage with PSDotFiles.
+for a full detailed explanation check the [sample.xml](sample.xml) file.
