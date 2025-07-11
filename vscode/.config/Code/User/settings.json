@@ -1,0 +1,80 @@
+{
+    //Editor settings
+    "editor.cursorStyle": "line",
+    "editor.fontFamily": "JetBrainsMonoNL Nerd Font",
+    "editor.fontSize": 16,
+    "editor.formatOnPaste": false,
+    "editor.inlineSuggest.enabled": true,
+    "editor.lineHeight": 1.8,
+    "editor.minimap.enabled": false,
+    "editor.mouseWheelZoom": true,
+    "editor.renderLineHighlight": "gutter",
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.fontLigatures": true,
+    //Workbench settings
+    "workbench.activityBar.location": "default",
+    "workbench.editor.labelFormat": "short",
+    "workbench.editor.showTabs": "multiple",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.layoutControl.enabled": false,
+    "workbench.sideBar.location": "right",
+    //Explorer settings
+    "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": true,
+    //breadcrumbs settings
+    "breadcrumbs.enabled": false,
+    "window.density.editorTabHeight": "compact",
+    "window.menuBarVisibility": "hidden",
+    "window.title": " ",
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 0.8,
+    "window.commandCenter": false,
+    //Markdown settings
+    "markdown.preview.scrollEditorWithPreview": true,
+    "markdown.preview.scrollPreviewWithEditor": true,
+    //Git settings
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    //Terminal settings
+    "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font",
+    "terminal.integrated.gpuAcceleration": "off",
+    //Remote settings
+    //GitHub settings
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    //Language settings
+    "[c]": {
+        "editor.semanticHighlighting.enabled": true,
+        "editor.suggest.insertMode": "replace",
+        "editor.wordBasedSuggestions": "off"
+    },
+    "[java]": {
+        "editor.formatOnSave": true
+    },
+    "[oraclesql]": {
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        },
+        "editor.suggest.showSnippets": true
+    },
+    //Extension settings
+    "extensions.ignoreRecommendations": true,
+    //Security settings
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.colorTheme": "One Dark Pro",
+}
