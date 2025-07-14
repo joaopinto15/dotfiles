@@ -1,7 +1,7 @@
 [user]
 	name = João Pinto
 	email = pintojad03@gmail.com
-	signingkey = DD2A51F9DD2D44D5
+	signingkey = 48F4A398E5F55B34
 [gpg]
 	program = gpg
 [commit]

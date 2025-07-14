@@ -66,3 +66,51 @@ You can include dotfiles for:
 * And more...
 
 ---
+
+### **System Setup Overview** ✨
+
+#### **Distro**:
+
+* **[Arch Linux](https://www.archlinux.org/)**
+
+#### **Window Manager**:
+
+* **[KDE Plasma](https://kde.org/plasma-desktop/)**
+
+#### **Display Manager**:
+
+* **[LY (LightDM)](https://github.com/nullgemm/ly)**
+
+---
+
+### **Core Applications & Tools** 🛠️
+
+#### **Browser**:
+
+* **[Brave Browser](https://brave.com/)**
+
+#### **Terminal**:
+
+* **[Ghostty](https://ghostty.dev/)**
+
+#### **Code Editor**:
+
+* **[Visual Studio Code](https://code.visualstudio.com/)**
+* **[Neovim](https://neovim.io/)**
+
+---
+
+### **Aesthetics** 🎨
+
+#### **Icon Theme**:
+
+* **[WhiteSur-dark](https://github.com/vinceliuice/WhiteSur-gtk-theme)**
+
+#### **Cursor Theme**:
+
+* **[Bibata Classic](https://github.com/ChrisTitusTech/bibata-cursor-theme)**
+
+
+#### **Wallpaper Clock**:
+
+* **[ModernClock](https://github.com/7thSamurai/ModernClock)**

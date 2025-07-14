@@ -1,7 +1,7 @@
 {
     //Editor settings
     "editor.cursorStyle": "line",
-    "editor.fontFamily": "JetBrainsMonoNL Nerd Font",
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
     "editor.fontSize": 16,
     "editor.formatOnPaste": false,
     "editor.inlineSuggest.enabled": true,
@@ -44,7 +44,7 @@
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     //Terminal settings
-    "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font",
+    "terminal.integrated.fontFamily": "monospace",
     "terminal.integrated.gpuAcceleration": "off",
     //Remote settings
     //GitHub settings
