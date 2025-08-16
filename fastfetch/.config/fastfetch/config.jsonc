@@ -1,0 +1,58 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "Linux_small", // search for logos: fastfetch --list-logos or --print-logos
+        "padding": {
+            "top": 1,
+        },
+    },
+    "display": {
+        "separator": " "
+    },
+    "modules": [
+        {
+            "type": "custom",
+            "format": "\u001b[90m┌───────────Hardware───────────┐"
+        },
+        {
+            "type": "os",
+            "key": " OS:",
+            "keyColor": "33"
+        },
+        {
+            "type": "packages",
+            "format": "{} (pacman)",
+            "key": "│ ├ ",
+            "keyColor": "33",
+        },
+        {
+            "type": "shell",
+            "key": "│ ├ ",
+            "keyColor": "33",
+        },
+        {
+            "type": "terminal",
+            "key": "│ ├ ",
+            "keyColor": "33",
+        },
+        {
+            "type": "lm",
+            "key": "│ ├ ",
+            "keyColor": "33"
+        },
+        {
+            "type": "wm",
+            "key": "│ ├ ",
+            "keyColor": "33",
+        },
+        {
+            "type": "memory",
+            "key": "└ └ ",
+            "keyColor": "33",
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m└──────────────────────────────┘"
+        },
+    ]
+}

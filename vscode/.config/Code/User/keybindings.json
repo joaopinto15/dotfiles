@@ -61,6 +61,10 @@
         "key": "l",
         "command": "list.expand",
         "when": "explorerViewletFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "composerMode.background"
     }
     // VIM navigation
 ]
