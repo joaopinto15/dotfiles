@@ -2,7 +2,12 @@
 	name = João Pinto
 	email = pintojad03@gmail.com
 	signingkey = 48F4A398E5F55B34
+
 [gpg]
 	program = gpg
+
 [commit]
 	gpgsign = true
+
+[core]
+	editor = nvim
