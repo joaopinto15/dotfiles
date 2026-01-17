@@ -1,25 +1,7 @@
-// Place your key bindings in this file to override the defaults
 [
-    // NAVIGATION
     {
-        "key": "ctrl+shift+a",
-        "command": "workbench.action.terminal.focusNext",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+shift+b",
-        "command": "workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+shift+n",
-        "command": "workbench.action.terminal.new",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+shift+w",
-        "command": "workbench.action.terminal.kill",
-        "when": "terminalFocus"
+        "key": "ctrl+alt+b",
+        "command": "workbench.action.chat.toggle"
     },
     // FILE TREE
     {
@@ -61,10 +43,5 @@
         "key": "l",
         "command": "list.expand",
         "when": "explorerViewletFocus && !inputFocus"
-    },
-    {
-        "key": "ctrl+e",
-        "command": "composerMode.background"
     }
-    // VIM navigation
 ]

@@ -1,4 +1,7 @@
 {
+    //"workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+    "workbench.colorTheme": "One Dark Pro",
+    "update.mode": "none",
     //Editor settings
     "editor.cursorStyle": "line",
     "editor.fontFamily": "JetBrainsMono Nerd Font",
@@ -6,8 +9,8 @@
     "editor.formatOnPaste": false,
     "editor.inlineSuggest.enabled": true,
     "editor.lineHeight": 1.8,
-    "editor.minimap.enabled": false,
-    "editor.mouseWheelZoom": true,
+    "editor.minimap.enabled": true,
+    "editor.mouseWheelZoom": false,
     "editor.renderLineHighlight": "gutter",
     "editor.formatOnSave": true,
     "editor.rulers": [
@@ -22,7 +25,7 @@
     "workbench.editor.labelFormat": "short",
     "workbench.editor.showTabs": "multiple",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.startupEditor": "newUntitledFile",
+    "workbench.startupEditor": "none",
     "workbench.layoutControl.enabled": false,
     "workbench.sideBar.location": "right",
     //Explorer settings
@@ -30,12 +33,13 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": true,
     //breadcrumbs settings
-    "breadcrumbs.enabled": false,
+    "breadcrumbs.enabled": true,
+    "breadcrumbs.filePath": "on",
     "window.density.editorTabHeight": "compact",
     "window.menuBarVisibility": "hidden",
     "window.title": " ",
     "window.titleBarStyle": "custom",
-    "window.zoomLevel": 0.8,
+    "window.zoomLevel": 0.5,
     "window.commandCenter": false,
     //Markdown settings
     "markdown.preview.scrollEditorWithPreview": true,
@@ -49,10 +53,7 @@
     //Remote settings
     //GitHub settings
     "github.copilot.enable": {
-        "*": true,
-        "plaintext": false,
-        "markdown": true,
-        "scminput": false
+        "*": true
     },
     //Language settings
     "[c]": {
@@ -60,21 +61,9 @@
         "editor.suggest.insertMode": "replace",
         "editor.wordBasedSuggestions": "off"
     },
-    "[java]": {
-        "editor.formatOnSave": true
-    },
-    "[oraclesql]": {
-        "editor.quickSuggestions": {
-            "comments": "on",
-            "strings": "on",
-            "other": "on"
-        },
-        "editor.suggest.showSnippets": true
-    },
     //Extension settings
     "extensions.ignoreRecommendations": true,
     //Security settings
     "security.workspace.trust.untrustedFiles": "open",
     "git.openRepositoryInParentFolders": "never",
-    "workbench.colorTheme": "One Dark Pro",
 }
