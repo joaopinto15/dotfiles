@@ -1,0 +1,69 @@
+{
+    //"workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "update.mode": "none",
+    //Editor settings
+    "editor.cursorStyle": "line",
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.fontSize": 12,
+    "editor.formatOnPaste": false,
+    "editor.inlineSuggest.enabled": true,
+    "editor.lineHeight": 1.8,
+    "editor.minimap.enabled": true,
+    "editor.mouseWheelZoom": false,
+    "editor.renderLineHighlight": "gutter",
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.fontLigatures": true,
+    //Workbench settings
+    "workbench.activityBar.location": "default",
+    "workbench.editor.labelFormat": "short",
+    "workbench.editor.showTabs": "multiple",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "none",
+    "workbench.layoutControl.enabled": false,
+    "workbench.sideBar.location": "right",
+    //Explorer settings
+    "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    //breadcrumbs settings
+    "breadcrumbs.enabled": true,
+    "breadcrumbs.filePath": "on",
+    "window.density.editorTabHeight": "compact",
+    "window.menuBarVisibility": "hidden",
+    "window.title": " ",
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 0.1,
+    "window.commandCenter": false,
+    //Markdown settings
+    "markdown.preview.scrollEditorWithPreview": true,
+    "markdown.preview.scrollPreviewWithEditor": true,
+    //Git settings
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    //Terminal settings
+    "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.gpuAcceleration": "off",
+    //Remote settings
+    //GitHub settings
+    "github.copilot.enable": {
+        "*": true
+    },
+    //Language settings
+    "[c]": {
+        "editor.semanticHighlighting.enabled": true,
+        "editor.suggest.insertMode": "replace",
+        "editor.wordBasedSuggestions": "off"
+    },
+    //Extension settings
+    "extensions.ignoreRecommendations": true,
+    //Security settings
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.openRepositoryInParentFolders": "never",
+}

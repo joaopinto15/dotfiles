@@ -1,0 +1,6 @@
+# Personal bash configuration
+# Add your personal exports, aliases, and functions here
+
+# Shared custom aliases/functions
+alias task='go-task'
+alias y=yadm
