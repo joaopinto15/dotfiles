@@ -8,3 +8,6 @@ source ~/.local/share/omarchy/default/bash/rc
 # Load optional machine/user-specific config files
 [[ -f ~/.bashrc.work ]] && source ~/.bashrc.work
 [[ -f ~/.bashrc.personal ]] && source ~/.bashrc.personal
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/home/pinto/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

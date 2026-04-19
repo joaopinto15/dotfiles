@@ -4,3 +4,5 @@
 # Shared custom aliases/functions
 alias task='go-task'
 alias y=yadm
+
+alias k='kubectl'

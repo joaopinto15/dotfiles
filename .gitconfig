@@ -4,3 +4,7 @@
 
 [core]
 	editor = nvim
+[diff]
+	tool = vscode
+[difftool]
+	prompt = false

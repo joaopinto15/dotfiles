@@ -1,6 +1,5 @@
-{
-    //"workbench.colorTheme": "Catppuccin Mocha",
-    "workbench.colorTheme": "Catppuccin Mocha",
+{ "workbench.colorTheme": "Everforest Dark",
+    //
     "update.mode": "none",
     //Editor settings
     "editor.cursorStyle": "line",
