@@ -174,10 +174,8 @@
     ]
   },
   "custom/hyprmoncfg": {
-    "exec": "echo '{\"text\": \"󰍹\", \"tooltip\": \"'\"$(hyprmoncfg profiles 2>/dev/null | tail -n +2 | awk '{printf \"%s (%s outputs)\\n\", $1, $2}' | paste -sd '\\\\n')\"'\"}'",
-    "return-type": "json",
-    "format": "{}",
-    "interval": 30,
+    "format": "󰍹",
+    "tooltip-format": "Display profiles",
     "on-click": "omarchy-launch-or-focus-tui hyprmoncfg",
     "on-click-right": "hyprmoncfg profiles | tail -n +2 | awk '{print $1}' | walker -d -p 'Apply profile' | xargs -r hyprmoncfg apply --confirm-timeout 0"
   },
