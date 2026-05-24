@@ -5,9 +5,22 @@
 # (don't mess with these directly, just overwrite them here!)
 source ~/.local/share/omarchy/default/bash/rc
 
-# Load optional machine/user-specific config files
-[[ -f ~/.bashrc.work ]] && source ~/.bashrc.work
-[[ -f ~/.bashrc.personal ]] && source ~/.bashrc.personal
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/home/pinto/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+# Reload bash
+r() {
+  source ~/.bashrc
+}
+
+# Auto-start tmux when opening an interactive terminal
+if command -v tmux >/dev/null 2>&1 &&
+  [ -z "$TMUX" ] &&
+  [[ $- == *i* ]]; then
+  tmux attach -t main || tmux new -s main
+fi
+
+# Development aliases
+alias task='go-task' # task script language
+alias y=yadm         # yadm dotfiles manager
+alias k='kubectl'    # kubectl tool for kubernetes
+
+source <(kubectl completion bash) # kubectl completions
+complete -o default -F __start_kubectl
