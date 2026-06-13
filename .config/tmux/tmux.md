@@ -15,9 +15,12 @@ prefix + , -> rename window
 
 prefix + [number] -> switch window
 
+prefix + & -> kill window
+
 ## Sessions commands
 
 prefix + d -> detach session (exit session without killing it)
+prefix + $ -> rename session
 
 ## Tmux cli commands
 
