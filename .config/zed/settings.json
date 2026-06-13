@@ -1,21 +1,85 @@
 {
-  "cli_default_open_behavior": "existing_window",
-  "close_on_file_delete": true,
-  "scroll_sensitivity": 1.0,
-  "scroll_beyond_last_line": "off",
-  "use_smartcase_search": true,
-  "agent": {
-    "favorite_models": [],
-    "model_parameters": [],
-    "tool_permissions": {
-      "default": "allow",
-      "tools": {},
-    },
-  },
+  "theme": "One Dark",
   "icon_theme": "Material Icon Theme",
-  "go_to_definition_scroll_strategy": "center",
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
+  "fast_scroll_sensitivity": 20,
+  "use_system_window_tabs": true,
+  "title_bar": {
+    "show_user_picture": false,
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": true,
+    "selections_menu": false,
+  },
+  "status_bar": {
+    "active_language_button": false,
+    "cursor_position_button": false,
+    // NOTE: This might change in the future.
+    "experimental.show": true,
+  },
+  "tab_bar": {
+    "show_pinned_tabs_in_separate_row": true,
+    "show": true,
+  },
+  "tabs": {
+    "show_diagnostics": "all",
+    "file_icons": true,
+    "git_status": true,
+  },
+
+  "rounded_selection": true,
+  "colorize_brackets": true,
+  "cursor_blink": false,
+  "hide_mouse": "on_typing_and_action",
   "completion_menu_item_kind": "symbol",
+  "completion_menu_scrollbar": "auto",
+  "minimap": {
+    "show": "never",
+  },
+  "scrollbar": {
+    "show": "auto",
+  },
+
+  "scroll_sensitivity": 10.0,
+  "scroll_beyond_last_line": "off",
+  "go_to_definition_scroll_strategy": "center",
+  "close_on_file_delete": true,
+  "restore_on_startup": "last_session",
   "diff_view_style": "split",
+  "inline_code_actions": false,
+  "lsp_document_colors": "inlay",
+  "inlay_hints": {
+    "enabled": false,
+  },
+  "wrap_guides": [90],
+  "show_wrap_guides": true,
+  "sticky_scroll": {
+    "enabled": true,
+  },
+  // Rainbow indentation
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware",
+  },
+
+  "use_smartcase_search": true,
+  "search": {
+    "button": false,
+    "case_sensitive": true,
+    "center_on_match": true,
+  },
+
+  "vim_mode": true,
+  "relative_line_numbers": "enabled",
+  "vim": {
+    "toggle_relative_line_numbers": false,
+    "use_system_clipboard": "on_yank",
+  },
+
   "outline_panel": {
     "dock": "left",
   },
@@ -24,28 +88,6 @@
   },
   "git_panel": {
     "dock": "left",
-  },
-  "session": {
-    // This might change in the future
-    "trust_all_worktrees": true,
-  },
-  "restore_on_startup": "last_session",
-  "disable_ai": true,
-  "colorize_brackets": true,
-  "use_system_window_tabs": true,
-  "rounded_selection": true,
-  "lsp_document_colors": "inlay",
-  "inline_code_actions": false,
-  "minimap": {
-    "show": "never",
-  },
-  "title_bar": {
-    "show_user_picture": false,
-  },
-  "search": {
-    "button": false,
-    "case_sensitive": true,
-    "center_on_match": true,
   },
   "project_panel": {
     // not sure yet if i'll turn this back on
@@ -58,82 +100,66 @@
       "horizontal_scroll": false,
     },
   },
-  "sticky_scroll": {
-    "enabled": true,
-  },
-  "scrollbar": {
-    "show": "auto",
-  },
-  "terminal": {
-    "keep_selection_on_copy": false,
-    "toolbar": {
-      "breadcrumbs": false,
-    },
-  },
-  "toolbar": {
-    "breadcrumbs": true,
-    "quick_actions": false,
-    "selections_menu": false,
-  },
-  "ui_font_family": "JetBrainsMono Nerd Font",
-  // "buffer_font_family": "Monaspace Neon",
-  "buffer_font_family": "JetBrainsMono Nerd Font",
-  "show_edit_predictions": false,
-  "hide_mouse": "on_typing_and_action",
-  "inlay_hints": {
-    "enabled": false,
-  },
-  "theme": "One Dark",
-  "telemetry": {
-    "metrics": false,
-    "diagnostics": false,
-  },
-  "vim_mode": true,
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
-  "cursor_blink": false,
-  "relative_line_numbers": "enabled",
-  "tab_bar": {
-    "show_pinned_tabs_in_separate_row": true,
-    "show": true,
-  },
-  // Rainbow indentation
-  "indent_guides": {
-    "enabled": true,
-    "coloring": "indent_aware",
-  },
-  "tabs": {
-    "show_diagnostics": "all",
-    "file_icons": true,
-    "git_status": true,
-  },
-  "preview_tabs": {
-    "enable_preview_from_project_panel": true,
-    "enable_preview_from_file_finder": false,
-    "enable_preview_from_multibuffer": false,
-    "enable_preview_multibuffer_from_code_navigation": false,
-    "enable_preview_file_from_code_navigation": false,
-  },
+
   "git": {
     "git_gutter": "tracked_files",
     "inline_blame": {
       "enabled": true,
     },
   },
-  "status_bar": {
-    "active_language_button": false,
-    "cursor_position_button": false,
-    // NOTE: This might change in the future.
-    "experimental.show": true,
+
+  "terminal": {
+    "scroll_multiplier": 1.0,
+    "keep_selection_on_copy": false,
+    "toolbar": {
+      "breadcrumbs": false,
+    },
   },
-  "vim": {
-    "toggle_relative_line_numbers": false,
-    "use_system_clipboard": "on_yank",
+
+  "disable_ai": false,
+  "show_edit_predictions": true,
+  "edit_predictions": {
+    "mode": "subtle",
+    "disabled_globs": [],
+    "allow_data_collection": "no",
+    "provider": "copilot",
   },
+  "cli_default_open_behavior": "existing_window",
+  "agent": {
+    "play_sound_when_agent_done": "always",
+    "single_file_review": true,
+    "inline_assistant_model": {
+      "provider": "openai-subscribed",
+      "model": "gpt-5.5",
+      "enable_thinking": false,
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+    "tool_permissions": {
+      "default": "confirm",
+      "tools": {},
+    },
+  },
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry",
+    },
+  },
+
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false,
+  },
+  "session": {
+    // This might change in the future
+    "trust_all_worktrees": true,
+  },
+
   "languages": {},
-  "wrap_guides": [90],
-  "show_wrap_guides": true,
-  "completion_menu_scrollbar": "auto",
+  "file_types": {
+    "Shell Script": ["tmux.conf"],
+  },
+
   "profiles": {
     "YouTube": {
       "settings": {
