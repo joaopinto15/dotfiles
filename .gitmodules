@@ -1,0 +1,3 @@
+[submodule "/home/pinto/.config/nvim"]
+	path = /home/pinto/.config/nvim
+	url = git@github.com:joaopinto15/nvim.git
