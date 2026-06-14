@@ -16,10 +16,9 @@ o.bind("SUPER + SHIFT + W", "Typora", { launch = "typora --enable-wayland-ime" }
 o.bind("SUPER + SHIFT + SLASH", "Passwords", { launch = "1password" })
 
 -- Web app bindings.
-o.bind("SUPER + SHIFT + A", "ChatGPT", { webapp = "https://chatgpt.com" })
-o.bind("SUPER + SHIFT + ALT + A", "Grok", { webapp = "https://grok.com" })
+o.bind("SUPER + SHIFT + A", "Claude", { webapp = "https://claude.ai/" })
+o.bind("SUPER + SHIFT + ALT + A", "Grok", { webapp = "https://chatgpt.com/" })
 o.bind("SUPER + SHIFT + C", "Calendar", { webapp = "https://app.hey.com/calendar/weeks/" })
-o.bind("SUPER + SHIFT + E", "Email", { webapp = "https://app.hey.com" })
 o.bind("SUPER + SHIFT + Y", "YouTube", { webapp = "https://youtube.com/" })
 o.bind("SUPER + SHIFT + ALT + G", "WhatsApp", { webapp = "https://web.whatsapp.com/", focus = true })
 o.bind(

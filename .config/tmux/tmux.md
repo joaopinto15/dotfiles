@@ -7,6 +7,7 @@ ctrl+b -> prefix key
 prefix + % -> vertical pane
 prefix + " -> horizontal pane
 prefix + x -> kill pane
+prefix + } -> swap pane
 
 ## Windows commands
 
