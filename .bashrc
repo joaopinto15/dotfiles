@@ -17,3 +17,4 @@ alias vim=nvim
 alias task='go-task' # task script language
 alias y=yadm         # yadm dotfiles manager
 alias k='kubectl'    # kubectl tool for kubernetes
+
