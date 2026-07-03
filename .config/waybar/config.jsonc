@@ -6,7 +6,7 @@
   "height": 26,
   "width": 0,
   "modules-left": ["custom/omarchy", "hyprland/workspaces"],
-  "modules-center": ["clock#horizontal", "clock#vertical", "custom/weather", "custom/update", "custom/voxtype", "custom/screenrecording-indicator", "custom/idle-indicator", "custom/notification-silencing-indicator"],
+  "modules-center": ["clock#horizontal", "clock#vertical", "custom/claudebar", "custom/update", "custom/voxtype", "custom/screenrecording-indicator", "custom/idle-indicator", "custom/notification-silencing-indicator"],
   "modules-right": [
     "group/tray-expander",
     "bluetooth",
@@ -72,13 +72,6 @@
     "format-alt": "{:L%d %B W%V %Y}",
     "tooltip": false,
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
-  },
-  "custom/weather": {
-    "exec": "$OMARCHY_PATH/default/waybar/weather.sh",
-    "return-type": "json",
-    "interval": 60,
-    "tooltip": false,
-    "on-click": "notify-send -u low \"$(omarchy-weather-status)\""
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
@@ -182,6 +175,14 @@
     "signal": 10,
     "return-type": "json"
   },
+"custom/claudebar": {
+    "exec": "claudebar --format '  {icon} {session_pct}% '",
+    "return-type": "json",
+    "interval": 300,
+    "signal": 13,
+    "tooltip": true,
+    "on-click": "xdg-open https://claude.ai/settings/usage"
+},
   "custom/hyprmoncfg": {
     "format": "󰍹",
     "tooltip-format": "Display profiles",
