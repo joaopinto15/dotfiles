@@ -1,21 +1,29 @@
 -- Change the default Omarchy look'n'feel.
 
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#general
-hl.config({
-  general = {
-    gaps_in = 4,
-    gaps_out = 8,
-  },
-})
+-- hl.config({
+--   general = {
+--     -- No gaps between windows or borders.
+--     gaps_in = 0,
+--     gaps_out = 0,
+--     border_size = 0,
+--
+--     -- Change to niri-like side-scrolling layout.
+--     layout = "scrolling",
+--   },
+-- })
 
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#decoration
-hl.config({
-  decoration = {
-    rounding = 8,
-    active_opacity = 1.0,
-    inactive_opacity = 1.0,
-  },
-})
+-- hl.config({
+--   decoration = {
+--     -- Use round window corners.
+--     rounding = 8,
+--
+--     -- Dim unfocused windows (0.0 = no dim, 1.0 = fully dimmed).
+--     dim_inactive = true,
+--     dim_strength = 0.15,
+--   },
+-- })
 
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#animations
 -- hl.config({
@@ -40,3 +48,17 @@ hl.config({
 --     column_width = 0.97,
 --   },
 -- })
+
+hl.config({
+  decoration = {
+    rounding = 8,
+  },
+})
+
+-- Fully opaque windows (overrides Omarchy's default-opacity rules).
+o.window(".*", { opacity = "1 1" })
+
+-- No window open/close/move animations.
+hl.animation({ leaf = "windows", enabled = false })
+hl.animation({ leaf = "windowsIn", enabled = false })
+hl.animation({ leaf = "windowsOut", enabled = false })

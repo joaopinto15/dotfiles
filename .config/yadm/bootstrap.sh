@@ -12,6 +12,7 @@ repo_pkgs=(
 
   # CLI tools
   yadm                # dotfiles manager (this repo)
+  nix                 # package manager, for anything the Arch repos/AUR lack
   github-cli          # gh, also the git credential helper in .gitconfig
   googleworkspace-cli # gws, Drive/Gmail/Calendar from the shell
 
@@ -49,3 +50,4 @@ yadm submodule update --init --recursive
 
 echo "==> Done. Log out and back in to pick up group and shell changes."
 echo "    Run ~/.config/yadm/setup-yubikey.sh with the YubiKey plugged in."
+echo "    Run ~/.config/yadm/setup-brave.sh with Brave closed."
