@@ -15,6 +15,10 @@ repo_pkgs=(
   nix                 # package manager, for anything the Arch repos/AUR lack
   github-cli          # gh, also the git credential helper in .gitconfig
   googleworkspace-cli # gws, Drive/Gmail/Calendar from the shell
+  fd                  # faster find, also what nvim/fzf use to list files
+  ripgrep             # rg, faster grep
+  fzf                 # fuzzy finder, powers the shell's Ctrl-R and Ctrl-T
+  zoxide              # z, jumps to frequently used directories
 
   # Development
   podman         # rootless OCI containers
@@ -26,14 +30,14 @@ repo_pkgs=(
   voxtype-bin # push-to-talk voice-to-text
 
   # Fingerprint reader
-  fprintd         # fingerprint reader D-Bus service
+  fprintd # fingerprint reader D-Bus service
 )
 
 aur_pkgs=(
-  brave-origin-bin         # browser
-  bruno-bin                # API client
-  libfprint-elanmoc2-git   # fingerprint driver patched for the ELAN 0C4C reader
-  hyprmoncfg               # monitor profiles and auto-switching for Hyprland
+  brave-origin-bin       # browser
+  bruno-bin              # API client
+  libfprint-elanmoc2-git # fingerprint driver patched for the ELAN 0C4C reader
+  hyprmoncfg             # monitor profiles and auto-switching for Hyprland
 )
 
 echo "==> Installing packages from the Arch/Omarchy repos"
