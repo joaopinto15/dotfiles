@@ -1,6 +1,7 @@
 [user]
 	name = João Pinto
 	email = pintojad03@gmail.com
+	signingkey = ~/.ssh/id_yubikey.pub
 
 [core]
 	editor = nvim
@@ -10,3 +11,12 @@
 
 [credential "https://gist.github.com"]
 	helper = !/usr/bin/gh auth git-credential
+
+[gpg]
+	format = ssh
+
+[commit]
+	gpgsign = true
+
+[tag]
+	gpgsign = true

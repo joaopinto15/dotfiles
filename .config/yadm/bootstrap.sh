@@ -1,45 +1,51 @@
 #!/bin/bash
+# Installs everything this setup adds on top of a stock Omarchy install.
+# Runs automatically after `yadm clone`, safe to re-run.
 set -euo pipefail
 
-cd "$HOME"
+repo_pkgs=(
+  # Terminal & editors
+  alacritty              # GPU-accelerated terminal emulator
+  neovim                 # main editor
+  vim                    # fallback editor for rescue shells
+  visual-studio-code-bin # GUI editor
 
-echo "🚀 Starting bootstrap..."
-echo ""
-echo "🐧 Detecting system..."
-echo "   System: $(uname -s)"
-echo "   Host:   $(hostname)"
-echo "   User:   $(whoami)"
-echo ""
+  # CLI tools
+  yadm                # dotfiles manager (this repo)
+  github-cli          # gh, also the git credential helper in .gitconfig
+  googleworkspace-cli # gws, Drive/Gmail/Calendar from the shell
 
-echo "📦 Installing core packages..."
-echo "   git, curl, wget, unzip, htop, ripgrep, fd-find,"
-echo "   tmux, zsh, stow, jq, fzf, build-essential"
-echo ""
+  # Development
+  podman         # rootless OCI containers
+  podman-compose # docker-compose.yml support for podman
+  podman-desktop # container GUI
 
-echo "🖥️  Installing desktop packages..."
-echo "   firefox, alacritty, thunar"
-echo ""
+  # Desktop apps
+  steam       # games
+  voxtype-bin # push-to-talk voice-to-text
 
-echo "📦 Setting up Flatpak..."
-echo "   Adding flathub remote"
-echo ""
+  # Fingerprint reader
+  fprintd         # fingerprint reader D-Bus service
+)
 
-echo "🐚 Setting default shell to zsh..."
-echo ""
+aur_pkgs=(
+  brave-origin-bin         # browser
+  bruno-bin                # API client
+  libfprint-elanmoc2-git   # fingerprint driver patched for the ELAN 0C4C reader
+  hyprmoncfg               # monitor profiles and auto-switching for Hyprland
+)
 
-echo "🔑 Generating SSH key..."
-echo "   Type: ed25519"
-echo "   Path: ~/.ssh/id_ed25519"
-echo ""
+echo "==> Installing packages from the Arch/Omarchy repos"
+omarchy-pkg-add "${repo_pkgs[@]}"
 
-echo "📁 Creating directories..."
-echo "   ~/Projects"
-echo "   ~/Downloads"
-echo "   ~/Documents"
-echo "   ~/Pictures/Screenshots"
-echo ""
+echo "==> Installing packages from the AUR"
+omarchy-pkg-aur-add "${aur_pkgs[@]}"
 
-echo "🔗 Initializing yadm submodules..."
-echo ""
+echo "==> Installing mise tools (~/.config/mise/config.toml)"
+mise install
 
-echo "✅ Bootstrap complete!"
+echo "==> Fetching yadm submodules (nvim config)"
+yadm submodule update --init --recursive
+
+echo "==> Done. Log out and back in to pick up group and shell changes."
+echo "    Run ~/.config/yadm/setup-yubikey.sh with the YubiKey plugged in."
