@@ -27,3 +27,26 @@ alias task='go-task' # task script language
 alias y=yadm         # yadm dotfiles manager
 alias k='kubectl'    # kubectl tool for kubernetes
 
+
+# Search tools
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# f [pattern] - pick a file, open it
+f() {
+  local file
+  file=$(fd --type f --hidden --exclude .git "${1:-}" |
+    fzf --preview 'bat --style=numbers --color=always {}') && $EDITOR "$file"
+}
+
+# s <pattern> - pick a matching line, open the file there
+s() {
+  local hit
+  hit=$(rg --line-number --no-heading --color=always --smart-case "$@" |
+    fzf --ansi --delimiter : --nth 3.. \
+      --preview 'bat --style=numbers --color=always --highlight-line {2} {1}' \
+      --preview-window '+{2}/2') || return
+  # ponytail: +line assumes a vim-family $EDITOR, which is the omarchy default
+  local file=${hit%%:*} rest=${hit#*:}
+  $EDITOR "+${rest%%:*}" "$file"
+}
